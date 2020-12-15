@@ -1058,3 +1058,8 @@ get_chart_data(
     {chart_name: "messages_read_over_time", min_length: "10"},
     populate_messages_read_over_time,
 );
+
+// TODO: Define populate_messages_per_stream using the messages_in_stream:is_bot:day stat.
+get_chart_data(
+    {chart_name: "messages_per_stream", min_length: "10"},
+);

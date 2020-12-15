@@ -269,7 +269,7 @@ def get_chart_data(request: HttpRequest, user_profile: UserProfile, chart_name: 
     elif chart_name == 'messages_per_stream':
         stats = [COUNT_STATS['messages_in_stream:is_bot:day']]
         tables = [aggregate_table]
-        subgroup_to_label: {stats[0]: 
+        subgroup_to_label: {stats[0]:
                             {str(id): stream for id, stream in Client.objects.values_list('id', 'stream')}}
         labels_sort_function = None
         include_empty_subgroups = True
